@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+
+    <!-- moment.js cdn -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+  
+  </head>
+    <!----Initialize Firebase-->
+<!-- <script> 
+  var config = {
+      apiKey: "AIzaSyAxbFDMQ1QqTzPFu1jvqceyV12HHlP9LKI",
+      authDomain: "train-2ac77.firebaseapp.com",
+      databaseURL: "https://train-2ac77.firebaseio.com",
+      projectId: "train-2ac77",
+      storageBucket: "train-2ac77.appspot.com",
+      messagingSenderId: "311388538197"
+    };
+    firebase.initializeApp(config);
+  </script>  -->
+   
+    <title>Train Schedule</title>
+  
+  <body>
+
+    <div class = "jumbotron">
+      <h1 class = "textHeading">Train Schedule</h1>
+      <h2 class = "textHeading">All aboard!</h2>
+    </div>
+
+    <br>
+    <p>Current Train Schedule</p>
+    <br>
+    <div>
+    <table class="table table-hover table-dark" id="trainTable">
+      <thead>
+        <tr>
+          <th scope="col">Train Name:</th>
+          <th scope="col">Destination:</th>
+          <th scope="col">Frequency (min):</th>
+          <th scope="col">Next Arrival:</th>
+          <th scope="col">Minutes Away:</th>
+        </tr>
+      </thead>
+      <tbody> 
+        <!-- content goes here-->
+        <!-- <tr>
+          <th scope="row"></th>
+          <td colspan="2"></td>
+          <td></td>
+        </tr> -->
+
+      </tbody>
+
+    </table>
+  </div>
+    <br>
+<p>Add your train below...</p>
+<br>
+    <form>
+      <div class="form-group">
+        <label for="name">Train Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Train Name">
+      </div>
+      <div class="form-group">
+        <label for="dest">Destination:</label>
+        <input type="text" class="form-control" id="dest" placeholder="Destination">
+      </div>
+      <div class="form-group">
+        <label for="firstTime">First Train Time (HH:mm - military time):</label>
+        <input type="text" class="form-control" id="firstTime" placeholder="First Train Time (24:00)">
+      </div>
+      <div class="form-group">
+        <label for="freq">Frequency (in minutes):</label>
+        <input type="text" class="form-control" id="freq" placeholder="Frequency (min)">
+      </div>
+      <button type="submit" id="trainInfoButton" class="btn btn-primary">Submit Train data</button>
+    </form>
+
+   
+    <script type="text/javascript" src="Assets/javascript/train.js"></script>
+
+</body>
+</html>

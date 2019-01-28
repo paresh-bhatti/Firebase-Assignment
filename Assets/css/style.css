@@ -1,0 +1,10 @@
+h1, h2 {
+    color: blue;
+    font-size: 50px;
+   margin-left: 300px;
+}
+
+/* did not work
+.jumbotron {
+    background-image: url("Assets/image/train.jpeg");
+} */
